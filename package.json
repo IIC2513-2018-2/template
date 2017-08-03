@@ -1,0 +1,37 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/IIC2513-2017-2/template.git",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "lint": "eslint ./src index.js",
+    "lint-fix": "eslint --fix ./src index.js"
+  },
+  "devDependencies": {
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "koa": "^2.3.0",
+    "koa-body": "^2.3.0",
+    "koa-ejs": "^4.1.0",
+    "koa-flash-message": "^0.1.6",
+    "koa-logger": "^3.0.1",
+    "koa-override-method": "^1.0.0",
+    "koa-router": "^7.2.1",
+    "koa-session": "^5.5.0",
+    "pg": "^7.1.2",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.6.0",
+    "sequelize-cli": "https://github.com/IIC2513-2017-2/sequelize-cli#iic2513-version"
+  },
+  "engines": {
+    "node": "^8.5.0",
+    "yarn": "^1.0.2"
+  }
+}
