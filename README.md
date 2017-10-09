@@ -30,7 +30,7 @@ createdb iic2513template_dev
 
 ### Run migrations
 ```sh
-./node_modules/.bin/sequelize db:migrate
+yarn run sequelize db:migrate
 ```
 
 ## Run the app!
@@ -48,7 +48,7 @@ node index.js
 or, if you want automatic restart after any change in your files
 
 ```sh
-./node_modules/.bin/nodemon
+yarn dev
 ```
 
 Now go to http://localhost:3000 and start browsing :)
