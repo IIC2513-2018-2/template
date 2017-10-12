@@ -5,7 +5,7 @@ Template built with [koa](http://koajs.com/) for IIC2513 - Tecnologías y Aplica
 ## Prerequisites:
 * [PostgreSQL](https://github.com/IIC2513-2017-2/syllabus/wiki/Getting-Started#postgresql)
   * you will need a database with name and user/password as configured in `src/config/database.js`
-* [Node.js v8.6.0](https://github.com/IIC2513-2017-2/syllabus/wiki/Node.js) or above
+* [Node.js v8.7.0](https://github.com/IIC2513-2017-2/syllabus/wiki/Node.js) or above
 * [Yarn 1.1.0](https://yarnpkg.com) or above
 
 ## Project Setup
