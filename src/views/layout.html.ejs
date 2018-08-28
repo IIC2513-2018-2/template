@@ -5,19 +5,19 @@
     <meta charset="utf-8">
     <title>IIC2513 - CHANGE-ME</title>
     <% if (env !== 'development') { %>
-      <link rel="stylesheet" href="/assets/styles.css">
+      <link rel="stylesheet" href="<%= assetPath('app.css') %>">
     <% } %>
   </head>
 
   <body>
     <header>
       <div id="logo">
-        <img src="/assets/logo.png" alt="Logo" />
+        <img src="<%= assetPath('logo.png') %>" alt="Logo" />
       </div>
     </header>
     <%- body %>
-    <script src="/assets/app.js"></script>
-    <script src="/assets/appReact.js"></script>
+    <script src="<%= assetPath('app.js') %>"></script>
+    <script src="<%= assetPath('appReact.js') %>"></script>
   </body>
 
 </html>

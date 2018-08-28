@@ -4,6 +4,7 @@ const koaBody = require('koa-body');
 const koaLogger = require('koa-logger');
 const koaFlashMessage = require('koa-flash-message').default;
 const koaStatic = require('koa-static');
+const assets = require('./assets');
 const render = require('koa-ejs');
 const session = require('koa-session');
 const override = require('koa-override-method');
@@ -41,16 +42,11 @@ app.use(koaLogger());
 
 // webpack middleware for dev mode only
 if (developmentMode) {
-  /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
-  app.use(require('koa-webpack')({ // eslint-disable-line global-require
-    dev: {
-      index: 'index.html',
-      stats: {
-        colors: true,
-      },
-    },
-    hot: false,
-  }));
+  // eslint-disable-next-line import/no-extraneous-dependencies, global-require
+  const koaWebpack = require('koa-webpack');
+  koaWebpack()
+    .then(middleware => app.use(middleware))
+    .catch(console.error);
 }
 
 app.use(koaStatic(path.join(__dirname, '..', 'build'), {}));
@@ -75,6 +71,7 @@ app.use((ctx, next) => {
 });
 
 // Configure EJS views
+app.use(assets(developmentMode));
 render(app, {
   root: path.join(__dirname, 'views'),
   viewExt: 'html.ejs',

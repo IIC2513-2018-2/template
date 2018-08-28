@@ -11,7 +11,6 @@ router.get('hello', '/', async (ctx) => {
 });
 
 router.post('hello', '/', async (ctx) => {
-  console.log(ctx.request.body);
   ctx.flashMessage.notice = 'Form successfully processed';
   // this is just to show how to send an e-mail using a mailer helper fn
   // but it will never be executed
