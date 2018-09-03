@@ -1,27 +1,14 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WebpackAssetPipeline = require('webpack-asset-pipeline');
-const webpack = require('webpack');
 
 const developmentMode = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
-
-function decorateWithHRM(entry) {
-  if (developmentMode) {
-    return [
-      // 'react-hot-loader/patch',
-      // 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
-      entry,
-    ];
-  }
-  return [entry];
-}
 
 module.exports = {
   mode: developmentMode ? 'development' : 'production',
   context: path.join(__dirname, 'src', 'assets'),
   entry: {
-    app: decorateWithHRM('./js/index.js'),
-    appReact: decorateWithHRM('./js/app.jsx'),
+    app: ['./js/index.js', './js/app.jsx'],
   },
   output: {
     publicPath: '/assets/',
@@ -40,9 +27,6 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        options: {
-          plugins: ['react-hot-loader/babel'],
-        },
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)(\?v=.+)?$/i,
