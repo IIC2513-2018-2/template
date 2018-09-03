@@ -46,7 +46,7 @@ if (developmentMode) {
   const koaWebpack = require('koa-webpack');
   koaWebpack()
     .then(middleware => app.use(middleware))
-    .catch(console.error);
+    .catch(console.error); // eslint-disable-line no-console
 }
 
 app.use(koaStatic(path.join(__dirname, '..', 'build'), {}));

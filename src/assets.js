@@ -1,6 +1,7 @@
 let manifest;
 
 try {
+  // eslint-disable-next-line global-require
   manifest = require('../build/assets/manifest.json');
 } catch (err) {
 
@@ -16,4 +17,4 @@ module.exports = function assetsBuilder(developmentMode) {
     ctx.state.assetPath = assetPath;
     return next();
   };
-}
+};
