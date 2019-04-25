@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) =>
         }
       },
       polygon: {
-        type: DataTypes.ENUM(),
+        type: DataTypes.ENUM,
+        values:[1,2,3],
         allowNull: true
       }
     },
