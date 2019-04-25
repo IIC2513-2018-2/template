@@ -1,14 +1,14 @@
 const config = {
   default: {
-    username: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
-    dialect: process.env.DB_DIALECT || 'postgres',
-    database: process.env.DB_NAME,
-    host: process.env.DB_HOST || '127.0.0.1',
+    username: "api",
+    password: "capstone2019",
+    dialect: 'postgres',
+    database: "agroboltmobile",
+    host:  "ec2-52-67-250-126.sa-east-1.compute.amazonaws.com",
   },
   development: {
     extend: 'default',
-    database: process.env.DB_NAME || 'iic2513template_dev',
+    database: "agroboltmobile",
   },
   test: {
     extend: 'default',
@@ -16,7 +16,7 @@ const config = {
   },
   production: {
     extend: 'default',
-    use_env_variable: 'DATABASE_URL',
+    database: "agroboltmobile",
   },
 };
 
