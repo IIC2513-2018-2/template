@@ -3,20 +3,20 @@ const config = {
     username: "api",
     password: "capstone2019",
     dialect: 'postgres',
-    database: "agroboltmobile",
+    database: "agroboltdatabasecorrected",
     host:  "ec2-52-67-250-126.sa-east-1.compute.amazonaws.com",
   },
   development: {
     extend: 'default',
-    database: "agroboltmobile",
+    database: "agroboltdatabasecorrected",
   },
   test: {
     extend: 'default',
-    database: 'iic2513template_test',
+    database: 'agroboltdatabasecorrected',
   },
   production: {
     extend: 'default',
-    database: "agroboltmobile",
+    database: "agroboltdatabasecorrected",
   },
 };
 
