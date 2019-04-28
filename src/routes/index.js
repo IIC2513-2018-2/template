@@ -13,9 +13,7 @@ router.get('clients', async (ctx) => {
   const clients = await ctx.orm.clients.findAll({
     atributes: ['name'],
   });
-  ctx.body = {
-    clients,
-  };
+  ctx.body = { clients };
 });
 
 router.get('clients.show', 'clients/:name', async (ctx) => {
@@ -52,6 +50,13 @@ router.get('places.byClient', 'places/:clientName', async (ctx) => {
   }
   ctx.body = { clientsPlaces };
   return ctx.body;
+});
+
+router.get('plagas', async (ctx) => {
+  const plagas = await ctx.orm.plagas.findAll({
+    attributes: { exclude: ['id', 'createdAt', 'updatedAt'] },
+  });
+  ctx.body = { plagas };
 });
 
 module.exports = router;

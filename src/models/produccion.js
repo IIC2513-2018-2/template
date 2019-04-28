@@ -1,6 +1,6 @@
 /* jshint indent: 2 */
 
-export default (sequelize, DataTypes) => {
+module.exports = (sequelize, DataTypes) => {
   return sequelize.define(
     "produccion",
     {

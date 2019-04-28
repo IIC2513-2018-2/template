@@ -5,4 +5,4 @@ function App() {
   return <div>Hello React World!</div>;
 }
 
-export default hot(module)(App);
+module.exports = hot(module)(App);
