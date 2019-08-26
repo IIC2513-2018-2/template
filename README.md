@@ -1,6 +1,6 @@
 # Note about this repo.
 
-DEPRECATED. This repository is deprecated. We don't recommend using this to start new projects because the dependencies are not updated. Please, use (and contribute) here :smile:
+DEPRECATED. This repository is deprecated. We don't recommend using this to start new projects because the dependencies are not updated. Please, use (and contribute) [here](https://github.com/IIC2513/template-generator) :smile:
 
 # Template
 
