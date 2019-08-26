@@ -1,3 +1,7 @@
+# Note about this repo.
+
+DEPRECATED. This repository is deprecated. We don't recommend using this to start new projects because the dependencies are not updated. Please, use (and contribute) here :smile:
+
 # Template
 
 Template built with [koa](http://koajs.com/) for IIC2513 - Tecnologías y Aplicaciones Web, Pontificia Universidad Católica de Chile.
