@@ -3,9 +3,9 @@
 Template built with [koa](http://koajs.com/) for IIC2513 - Tecnologías y Aplicaciones Web, Pontificia Universidad Católica de Chile.
 
 ## Prerequisites:
-* [PostgreSQL](https://github.com/IIC2513-2017-2/syllabus/wiki/Getting-Started#postgresql)
+* PostgreSQL
   * you will need a database with name and user/password as configured in `src/config/database.js`
-* [Node.js v8.4.0](https://github.com/IIC2513-2017-2/syllabus/wiki/Node.js) or above
+* Node.js v8.4.0 or above
 * [Yarn](https://yarnpkg.com)
 
 ## Project Setup
@@ -20,7 +20,6 @@ Template built with [koa](http://koajs.com/) for IIC2513 - Tecnologías y Aplica
 * On Mac OS X using Homebrew: `brew install postgresql`
   * Start service: check [LaunchRocket](https://github.com/jimbojsb/launchrocket) or [lunchy](https://www.moncefbelyamani.com/how-to-install-postgresql-on-a-mac-with-homebrew-and-lunchy/) for postgresql service management
 * [Other platforms](https://www.postgresql.org/download/)
-* [More details](https://github.com/IIC2513-2017-2/syllabus/wiki/Getting-Started#postgresql)
 
 ### Create development database
 
